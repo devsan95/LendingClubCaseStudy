@@ -19,43 +19,56 @@ Step 1: Data Cleaning 1
 Step 2: Univariate Analysis
 Step 3: Segemented Univariate Analysis
 Step 4: Bivaraiate/Multivariate Analysis
-Step 5: Results
+Step 5: Insights and Recommendations
 
-Conclusions:
-The above analysis with respect to the charged off loans for each variable suggests the following. There is a more probability of defaulting when :
-- Applicants having house_ownership as 'RENT'
-- Applicants who use the loan to clear other debts
-- Applicants who receive interest at the rate of 13-17%
-- Applicants who have an income of range 31201 - 58402
-- Applicants who have 20-37 open_acc
-- Applicants with employement length of 10
-- When funded amount by investor is between 5000-10000
-- Loan amount is between 5429 - 10357
-- Dti is between 12-18
-- When monthly installments are between 145-274
-- Term of 36 months
-- When the loan status is Not verified
-- When the no of enquiries in last 6 months is 0
-- When the number of derogatory public records is 0
-- When the purpose is 'debt_consolidation'
-- Grade is 'B'
-- And a total grade of 'B5' level.
+Insights:
+The analysis of charged-off loans reveals a higher probability of default in the following cases:
 
-The above analysis with respect to the charged off loans. There is a more probability of defaulting when :
-- Applicants taking loan for 'home improvement' and have income of 60k -70k
-- Applicants whose home ownership is 'MORTGAGE and have income of 60-70k
-- Applicants who receive interest at the rate of 21-24% and have an income of 70k-80k
-- Applicants who have taken a loan in the range 30k - 35k and are charged interest rate of 15-17.5 %
-- Applicants who have taken a loan for small business and the loan amount is greater than 14k
-- Applicants whose home ownership is 'MORTGAGE and have loan of 14-16k
-- When grade is F and loan amount is between 15k-20k
-- When employment length is 10yrs and loan amount is 12k-14k
-- When the loan is verified and loan amount is above 16k
-- For grade G and interest rate above 20%
+- Applicants with an income between 60k and 70k who take out loans for "home improvement."
+- Applicants with "MORTGAGE" as their home ownership status and an income of 60k-70k.
+- Applicants earning 70k-80k who receive an interest rate of 21-24%.
+- Applicants with loan amounts between 30k and 35k, charged an interest rate of 15-17.5%.
+- Applicants taking loans for small businesses with amounts exceeding 14k.
+- Applicants with "MORTGAGE" home ownership and loan amounts between 14k and 16k.
+- Applicants with a grade of "F" and loan amounts ranging from 15k to 20k.
+- Applicants with 10 years of employment and loan amounts between 12k and 14k.
+- Verified loans with amounts over 16k.
+- Applicants with a grade of "G" and interest rates above 20%.
+
+### Recommendations:
+Screening House Ownership:
+ Avoid high-risk applicants with house ownership status marked as 'RENT' or 'MORTGAGE' (especially when income is within the 60k-80k range), as these applicants have shown a higher likelihood of default.
+ 
+### Loan Purpose & Debt Consolidation:
+ Prioritize applicants with loan purposes other than debt consolidation, home improvement, or small business loans, as these purposes are associated with higher default rates.
+ 
+### Interest Rate Caps:
+Set a maximum interest rate cap below 13%, as applicants charged rates in the 13-24% range are more prone to defaulting.
+
+### Income Range Filters:
+Avoid applicants with an income range of 31,201 - 58,402 and 60k-80k, especially when paired with loans for home improvement or other non-essential uses, as these income brackets appear at higher risk.
+
+### Loan Amount Control:
+Be cautious with applicants seeking loans between $5,429 - $10,357 or $15k - $35k, particularly those with a DTI ratio between 12-18 and monthly installments in the range of 145 - 274.
+
+### Employment Length Verification:
+Ensure that applicants' employment length is verified and consider lengthier employment as a factor. 10 years of employment is a critical cutoff point, with higher risk associated with longer durations.
+
+### Credit Enquiries and Records:
+Avoid applicants with 0 inquiries in the last 6 months and no derogatory public records—counterintuitively, this indicates a higher likelihood of defaulting. Verified records and inquiries are essential.
+
+### Loan Term Limit:
+Prefer shorter loan terms. Defaults are more common in 36-month terms.
+
+### Lower Grade Applicants:
+Be more cautious with applicants in Grade B, B5, F, and G. 
+Defaults increase when loans are issued to these grades, especially with high loan amounts or interest rates exceeding 20% for Grade G applicants.
+
+
 
 Contributors
 
     Santoshkumar Vagga
     Neeraj Kumar
 
-Developed as part of the Exloratory Data Analysis Module required for Post Graduate Diploma in Machine Learning and AI - IIIT,Bangalore.
+Developed as part of the Exloratory Data Analysis Module required for Executive Post Graduate Programme in Machine Learning and AI - IIIT, Bengaluru -2024-25.
